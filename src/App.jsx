@@ -1,5 +1,5 @@
 import "./scss/main.scss";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Provider } from "react-redux";
 // Components
 import AboutUs from "./components/AboutUs";
@@ -15,6 +15,7 @@ function App() {
           <SideBar />
           <div className="dashboard__container">
             <Routes>
+              <Route path="/" element={<Navigate to="/contacts" />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route />

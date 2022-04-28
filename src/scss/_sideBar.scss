@@ -1,2 +1,26 @@
 .sideBar__container {
+  background-color: #393e46;
+  padding: 20px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+
+  .sideBar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      text-align: center;
+      padding: 8px 16px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }

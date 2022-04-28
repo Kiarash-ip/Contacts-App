@@ -7,9 +7,9 @@ export default function Contacts() {
   const state = useSelector((state) => state);
   console.log(state);
   return (
-    <div>
+    <div className="contacts__container">
       <AddNewContact />
-      <table>
+      <table className="contacts__table">
         <thead>
           <tr>
             <th>Firstname</th>

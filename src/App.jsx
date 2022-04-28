@@ -13,11 +13,13 @@ function App() {
       <div className="main-container">
         <div className="container">
           <SideBar />
-          <Routes>
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route />
-          </Routes>
+          <div className="dashboard__container">
+            <Routes>
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route />
+            </Routes>
+          </div>
         </div>
       </div>
     </Provider>

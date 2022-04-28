@@ -5,7 +5,6 @@ import Contact from "./Contact";
 
 export default function Contacts() {
   const state = useSelector((state) => state);
-  console.log(state);
   return (
     <div className="contacts__container">
       <AddNewContact />

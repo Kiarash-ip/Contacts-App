@@ -2,6 +2,7 @@
 @import "sideBar";
 @import "modal";
 @import "contacts";
+@import "aboutUs";
 
 .main-container {
   display: flex;
@@ -15,12 +16,39 @@
 
 .container {
   display: grid;
-  width: 40vw;
+  width: 50vw;
   grid-template-columns: 150px 1fr;
-  min-height: 60%;
+  height: 60%;
+  overflow-y: hidden;
 }
 
 .dashboard__container {
+  position: relative;
   background-color: #393e46;
   border-radius: 10px;
+  padding: 10px 10px;
+  overflow-y: scroll;
 }
+
+.dashboard__container::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.dashboard__container::-webkit-scrollbar-thumb {
+  background-color: darken(#393e46, 15%);
+  border-radius: 10px;
+}
+// body::-webkit-scrollbar {
+//     width: 1em;
+//   }
+
+//   body::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//   }
+
+//   body::-webkit-scrollbar-thumb {
+//     background-color: darkgrey;
+//     outline: 1px solid slategrey;
+//   }

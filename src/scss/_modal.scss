@@ -1,20 +1,83 @@
 .modal__container {
   display: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   inset: 0;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
   &.open {
     display: flex;
+    animation: bg-color 0.5s ease forwards;
   }
 
   .modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+    padding: 10px 20px;
+    & > button {
+      padding: 4px;
+      border: none;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #393e46;
+      align-self: flex-end;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
     form {
       display: flex;
       flex-direction: column;
+
+      & > input {
+        padding: 10px 15px;
+        border: none;
+        margin: 10px 10px;
+        transition: border 0.3s;
+        outline: none;
+        caret-color: #393e46;
+        border: 2px solid transparent;
+
+        &::placeholder {
+          text-transform: capitalize;
+          letter-spacing: 1px;
+          font-size: 1.3rem;
+        }
+
+        &:focus {
+          border: 2px solid #393e46;
+        }
+      }
+
+      & > button {
+        margin: 10px 10px;
+        padding: 10px 15px;
+        font-size: 1.4rem;
+        background-color: #393e46;
+        border-color: transparent;
+        color: #fff;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        transition: 0.2s;
+
+        &:hover {
+          border-color: #393e46;
+          background-color: #eeeeee;
+          color: #393e46;
+        }
+      }
     }
+  }
+}
+
+@keyframes bg-color {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

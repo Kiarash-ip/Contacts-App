@@ -40,6 +40,10 @@
         caret-color: #393e46;
         border: 2px solid transparent;
 
+        &.notValid {
+          border: 2px solid red;
+        }
+
         &::placeholder {
           text-transform: capitalize;
           letter-spacing: 1px;

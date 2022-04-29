@@ -12,3 +12,9 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
 }
+
+@media only screen and (max-width: 830px) {
+  html {
+    font-size: 55%;
+  }
+}
